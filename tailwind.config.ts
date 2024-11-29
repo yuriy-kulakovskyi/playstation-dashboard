@@ -9,9 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+        'theme': "rgb(9, 8, 14)",
+        'primary': "rgb(17, 18, 26)",
+        'indicator': "#A8F63C",
+      }
     },
   },
   plugins: [],
