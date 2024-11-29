@@ -5,6 +5,7 @@ import SideBarItem from "./sidebar-item";
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 
 import IcDashboard from "./assets/svg/dashboard";
 import IcGames from "./assets/svg/game";
@@ -24,6 +25,7 @@ const Sidebar: React.FC<Sidebarprops> = ({
   children 
 }) => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const routes = useMemo(() => [
     {
@@ -70,7 +72,7 @@ const Sidebar: React.FC<Sidebarprops> = ({
   ], [pathname])
 
   return (
-    <div className="flex h-full flex-row">
+    <div className="flex h-full">
       <div className="
         w-[120px]
         min-h-[100vh]
@@ -105,6 +107,11 @@ const Sidebar: React.FC<Sidebarprops> = ({
                       "bg-primary": route.active
                     }
                   )}
+
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(route.href);
+                }}
               >
                 <SideBarItem
                   isActive={route.active}
