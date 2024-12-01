@@ -17,6 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Sidebar>
+          <div dir="rtl">
+            <div className="bg-gray-500 h-[56px] w-[2px] rounded-s-lg fixed top-[50%] left-[120px]"></div>
+          </div>
           <div className="flex flex-col min-w-[90vw]">
             {children}
           </div>
