@@ -72,7 +72,7 @@ const Sidebar: React.FC<Sidebarprops> = ({
   ], [pathname])
 
   return (
-    <div className="flex h-full">
+    <div className="flex h-full relative">
       <div className="
         w-[120px]
         min-h-[100vh]
@@ -81,6 +81,9 @@ const Sidebar: React.FC<Sidebarprops> = ({
         flex-col
         justify-between
         items-center
+        fixed
+        bg-theme
+        z-10
       ">
         {/* logo */}
         <div className="
@@ -152,7 +155,7 @@ const Sidebar: React.FC<Sidebarprops> = ({
         </div>
       </div>
       
-      <main className="flex">
+      <main className="flex pl-[120px]">
         {children}
       </main>
     </div>

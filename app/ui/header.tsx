@@ -4,6 +4,7 @@ import IcNotification from "./assets/svg/notification";
 import Image from "next/image";
 import IcSettings from "./assets/svg/settings";
 import IcBag from "./assets/svg/bag";
+import IcVector from "./assets/svg/vector";
 
 const Header = () => {
   return (
@@ -75,7 +76,15 @@ const Header = () => {
           />
 
           <div className="flex flex-col h-full">
-            <h1 className="text-white">Entriflay</h1>
+            <div className="flex gap-[5px]">
+              <h1 className="text-white">Entriflay</h1>
+              <span className="rotate-[90deg]">
+                <IcVector
+                  width={10}
+                  height={10}
+                />
+              </span>
+            </div>
 
             {/* online */}
             <div className="flex items-center gap-[4px]">
