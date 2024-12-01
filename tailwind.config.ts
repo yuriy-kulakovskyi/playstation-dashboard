@@ -12,6 +12,11 @@ export default {
         'theme': "rgb(9, 8, 14)",
         'primary': "rgb(17, 18, 26)",
         'indicator': "#A8F63C",
+        'start-gradient': "#35AAFF",
+        'end-gradient': "#194BFB",
+      },
+      backgroundImage: {
+        'hero': "url('/images/hero.png')",
       }
     },
   },
